@@ -1,17 +1,19 @@
 <template>
   <div>
-    <PadeDeportes/>
+    <SumaPadre />
   </div>
 </template>
 
 <script>
-import PadeDeportes from './components/PadeDeportes.vue';
+import SumaPadre from './components/SumaPadre.vue';
+
+
 
 
 export default {
   name: 'App',
   components: {
-    PadeDeportes
+    SumaPadre
   }
 }
 </script>
