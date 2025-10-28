@@ -1,11 +1,12 @@
 <template>
   <div>
-   <ComicsComponent />
+    <SeleccionMultipleCheckBox/>
   </div>
 </template>
 
 <script>
-import ComicsComponent from './components/ComicsComponent.vue';
+import SeleccionMultipleCheckBox from './components/SeleccionMultipleCheckBox.vue';
+
 
 
 
@@ -15,7 +16,7 @@ import ComicsComponent from './components/ComicsComponent.vue';
 export default {
   name: 'App',
   components: {
-    ComicsComponent 
+    SeleccionMultipleCheckBox
   }
 }
 </script>

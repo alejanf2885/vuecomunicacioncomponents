@@ -15,6 +15,9 @@
     <button @click="seleccionarfavorito">
         Seleccionar Favorito
     </button>
+    <button @click="deleteComic">
+        Eliminar 
+    </button>
   </div>
 </template>
 
@@ -22,11 +25,15 @@
 export default {
   name: "ComicComponent",
   components: {},
-  props: ["comic"],
+  props: ["comic","index"],
   methods : {
     seleccionarfavorito () {
         this.$emit('seleccionarFavorito',this.comic)
+    },
+    deleteComic() {
+        this.$emit('deleteComic',this.index)
     }
+
   }
   
 };

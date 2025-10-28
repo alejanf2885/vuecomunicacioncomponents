@@ -1,6 +1,24 @@
 <template>
   <div>
     <h2>Padre Comics</h2>
+
+    <div class="form">
+        <form action="" v-on:submit.prevent="createComic">
+            <label for="">Titulo</label>
+            <input type="text" v-model="comicForm.titulo">
+            <label for="">Imagen</label>
+            <input type="text" v-model="comicForm.imagen">
+            <label for="">Descripcion</label>
+            <input type="text" v-model="comicForm.descripcion">
+            <label for="">Año</label>
+            <input type="number" v-model="comicForm.year">
+            <button>
+                Nuevo comic
+            </button>
+        </form>
+    </div>
+
+
     <div class="fav" v-if="comicFavorito != null">
       <h3>Hijo component</h3>
       <p>{{ comicFavorito.titulo }}</p>
@@ -20,6 +38,8 @@
       <ComicComponent
         :comic="comic"
         @seleccionarFavorito="seleccionarFavorito"
+        :index="i"
+        @deleteComic="deleteComic"
       />
     </div>
   </div>
@@ -38,6 +58,12 @@ export default {
       console.log(comic.titulo);
       this.comicFavorito = comic;
     },
+    createComic() {
+        this.comics.push(this.comicForm);
+    },
+    deleteComic(index) {
+        this.comics.splice(index,1)
+    }
   },
   data() {
     return {
@@ -86,6 +112,12 @@ export default {
         },
       ],
       comicFavorito: null,
+      comicForm: {
+        titulo:'',
+        imagen:'',
+        descripcion:'',
+        year: 0
+      }
     };
   },
 };
