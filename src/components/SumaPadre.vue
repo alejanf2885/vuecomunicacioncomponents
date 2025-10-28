@@ -12,7 +12,7 @@
       />
         
     </div>
-
+    <p>Hoka</p>
   </div>
 </template>
 
