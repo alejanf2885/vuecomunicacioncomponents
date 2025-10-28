@@ -1,0 +1,17 @@
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+
+img{
+    width: 150px;
+    height: 250px;
+}
+
+div#comics {
+    float: left;
+}

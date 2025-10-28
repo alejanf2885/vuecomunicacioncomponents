@@ -1,11 +1,13 @@
 <template>
   <div>
-    <SumaPadre />
+   <ComicsComponent />
   </div>
 </template>
 
 <script>
-import SumaPadre from './components/SumaPadre.vue';
+import ComicsComponent from './components/ComicsComponent.vue';
+
+
 
 
 
@@ -13,7 +15,7 @@ import SumaPadre from './components/SumaPadre.vue';
 export default {
   name: 'App',
   components: {
-    SumaPadre
+    ComicsComponent 
   }
 }
 </script>
